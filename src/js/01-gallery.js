@@ -27,27 +27,10 @@ function createGalleryItems(image) {
     })
     .join('');
 }
-gallery.addEventListener('click', onClick);
 
-function onClick(event) {
-  event.preventDefault();
-
-  if (!event.target.classList.contains('gallery__image')) {
-    return;
-  }
-
-  let lightbox = new SimpleLightbox('.gallery a', {
-    scrollZoom: false,
-    captionDelay: 250,
-    captionsData: 'alt',
-    doubleTapZoom: 1,
-  });
-  instanse.show();
-
-  function modalClose(event) {
-    console.log(event.code);
-    if (event.code === 'Escape') {
-      instanse.close();
-    }
-  }
-}
+let lightbox = new SimpleLightbox('.gallery a', {
+  scrollZoom: false,
+  captionDelay: 250,
+  captionsData: 'alt',
+  doubleTapZoom: 1,
+});
