@@ -3,7 +3,7 @@ import Player from '@vimeo/player';
 
 const TIME_KEY = 'videoplayer-current-time';
 const iframe = document.querySelector('iframe');
-const player = new player(iframe);
+const player = new Player(iframe);
 
 const onPlay = function (data) {
   const strigifyData = JSON.stringify(data);
