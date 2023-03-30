@@ -1,5 +1,5 @@
 import '../css/common.css';
-import { throttle } from 'lodash';
+import throttle from 'lodash.throttle';
 import Player from '@vimeo/player';
 
 const TIME_KEY = 'videoplayer-current-time';
